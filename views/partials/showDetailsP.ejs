@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- <%- include('head') -%> -->
+</head>
+<body>
+     
+
+    <% (db) => { %>
+            <!-- <a href="/shows/"><%= movie.Title %></a> -->
+               <h4><%= db.Title %></h4>
+               <h6><%= db.Year %></h6>
+               <h6><%= db.Rated %></h6>
+               <p><%= db.Plot %></p>
+
+    <% } %>
+
+</body>
+</html>

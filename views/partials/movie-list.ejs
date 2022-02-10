@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('head') -%>
+</head>
+<body>
+    <div id="showsList" class="row row-cols">
+            <% db.forEach(movie => { %>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <img src="<%= movie.Images %>" class="card-img-top" alt="...">
+                        <h4 class="card-title"><%= movie.Title %></h4>
+                        <h6><%= movie.Year %></h6>
+                        <h6><%= movie.Rated %></h6>
+                        <p class="card-text"><%= movie.Plot %></p>
+                        <a href="/showdetails" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+  
+  
+
+</body>
+</html>
+
+
+
+<!-- <ul>
+    <% db.forEach(movie => { %>
+        <li>
+            <a href="/shows/"><%= movie.Title %></a>
+        </li>
+    <% }) %>
+
+   </ul> -->
